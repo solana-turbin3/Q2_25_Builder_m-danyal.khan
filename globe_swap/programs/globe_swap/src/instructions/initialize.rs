@@ -55,7 +55,7 @@ pub struct Initialize<'info> {
 
 impl Initialize<'_> {
     pub fn create_escrow(&mut self, seed: u64, receive_amt: u64, bumps: &InitializeBumps) -> Result<()> {
-        // Initialize escrow account
+        // Initializing escrow account
         self.escrow.set_inner(Escrow {
             seed,
             maker: self.seller.key(),
